@@ -13,7 +13,6 @@ import com.hnx.base.client.activities.AsyncActivityMapper;
 import com.hnx.base.client.activities.ClientFactory;
 import com.hnx.base.client.activities.ClientFactoryImpl;
 import com.hnx.base.client.activities.importVideo.ImportVideoPlace;
-import com.hnx.base.shared.model.UserInfo;
 
 public class HNX implements EntryPoint {
 	
@@ -21,16 +20,15 @@ public class HNX implements EntryPoint {
 	
 	public void onModuleLoad() {
 //		ClientData.prepareData();
-		ClientData.loginFromSession(new AsyncCallback<UserInfo>() {
+		ClientData.loginByPassword(new AsyncCallback<Void>() {
 			
 			@Override
-			public void onSuccess(UserInfo result) {
+			public void onSuccess(Void result) {
 				onLoadedUserData();
 			}
 			
 			@Override
 			public void onFailure(Throwable caught) {
-				onLoadedUserData();
 			}
 		});
 	}

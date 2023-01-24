@@ -2,10 +2,16 @@ package com.hnx.base.client;
 
 import java.util.List;
 
+import org.gwtbootstrap3.client.ui.TextBox;
+
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.KeyDownEvent;
+import com.google.gwt.event.dom.client.KeyDownHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.rpc.ServiceDefTarget;
+import com.hnx.base.client.view.MyDialog;
 import com.hnx.base.client.view.Toaster;
+import com.hnx.base.shared.Callback;
 import com.hnx.base.shared.model.IBasic;
 import com.hnx.base.shared.model.UserInfo;
 
@@ -122,5 +128,53 @@ public class ClientData {
 				}
 			}
 		});
+	}
+
+	public static void loginByPassword(AsyncCallback<Void> asyncCallback) {
+		MyDialog myDialog = new MyDialog();
+		TextBox textBox = new TextBox();
+		textBox.addKeyDownHandler(new KeyDownHandler() {
+			
+			@Override
+			public void onKeyDown(KeyDownEvent arg0) {
+				if(arg0.getNativeEvent().getKeyCode() == 13) {
+					onCheckPassword(asyncCallback, textBox.getValue(), new Callback<Void>() {
+
+						@Override
+						public void onSuccess(Void arg0) {
+							myDialog.hide();
+						}
+					});
+				}
+			}
+		});
+		textBox.getElement().setAttribute("type", "number");
+		myDialog.show("Password", textBox, "OK", "Cancel", new AsyncCallback<Void>() {
+			
+			@Override
+			public void onSuccess(Void arg0) {
+				onCheckPassword(asyncCallback, textBox.getValue(), new Callback<Void>() {
+
+					@Override
+					public void onSuccess(Void arg0) {
+						myDialog.hide();
+					}
+				});
+			}
+			
+			@Override
+			public void onFailure(Throwable arg0) {
+				myDialog.hide();
+			}
+		});
+	}
+	
+	private static void onCheckPassword(AsyncCallback<Void> callback, String value, Callback<Void> onHide) {
+		if(value.equals("1341")) {
+			callback.onSuccess(null);
+			onHide.onSuccess(null);
+		} else {
+			Toaster.showError("Password incorrect!");
+		}
 	}
 }
