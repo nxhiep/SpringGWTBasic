@@ -6,7 +6,7 @@
 
 # gwt caches and compiled units #
 war/springgwtbasic/
-war/husttextile/
+war/hnx/
 gwt-unitCache/
 
 # boilerplate generated classes #

@@ -1,4 +1,4 @@
-<%@page import="com.hust.textile.shared.model.UserInfo"%>
+<%@page import="com.hnx.base.shared.model.UserInfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 UserInfo currentUser = (UserInfo) request.getAttribute("currentUser");

@@ -8,12 +8,12 @@
   <!-- Servlets -->
   <servlet>
     <servlet-name>DataServlet</servlet-name>
-    <servlet-class>com.hust.textile.server.DataServiceImpl</servlet-class>
+    <servlet-class>com.hnx.base.server.DataServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
     <servlet-name>DataServlet</servlet-name>
-    <url-pattern>/husttextile/data</url-pattern>
+    <url-pattern>/hnx/data</url-pattern>
   </servlet-mapping>
   
 <!--   Spring Configuation -->
@@ -34,7 +34,7 @@
 	</context-param>
 
 	<listener>
-		<listener-class>com.hust.textile.server.MyContextListener</listener-class>
+		<listener-class>com.hnx.base.server.MyContextListener</listener-class>
 	</listener>
 	
 <!-- 	ObjectifyFilter -->
@@ -50,7 +50,7 @@
 <!-- 	CORSFilter -->
 	<filter>
 		<filter-name>CORSFilter</filter-name>
-		<filter-class>com.hust.textile.server.CORSFilter</filter-class>
+		<filter-class>com.hnx.base.server.CORSFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>CORSFilter</filter-name>

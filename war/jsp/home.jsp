@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Home</title>
-		<script type="text/javascript" src="husttextile/husttextile.nocache.js"></script>
+		<script type="text/javascript" src="hnx/hnx.nocache.js"></script>
 		<jsp:include page="/jsp/widgets/seo.jsp"></jsp:include>
 		<jsp:include page="/jsp/widgets/resources.jsp"></jsp:include>
 	</head>
