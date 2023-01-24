@@ -80,6 +80,11 @@ public class CreateVideoPopup extends MyDialog {
 
 	private void updateData(Video video) {
 		if(video == null) {
+			nameBox.setValue("");
+			descriptionBox.setValue("");
+			categoryBox.setValue("");
+			videoBox.setValue("");
+			imageBox.setValue("");
 			return;
 		}
 		nameBox.setValue(video.getName());
