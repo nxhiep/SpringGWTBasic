@@ -7,6 +7,6 @@
 	</ui:style>
 	<g:HTMLPanel ui:field="mainPanel" styleName="basic-page" width="100%" height="100%">
 		<w:HeaderPanel ui:field="headerPanel" styleName="header-panel"></w:HeaderPanel>
-		<g:FlowPanel ui:field="contentPanel" styleName="container content-panel"></g:FlowPanel>
+		<g:FlowPanel ui:field="contentPanel" styleName="content-panel"></g:FlowPanel>
 	</g:HTMLPanel>
 </ui:UiBinder> 

@@ -86,7 +86,7 @@ public class UploaderPanel extends FlowPanel {
 				uploader.setButtonDisabled(true);
 				float percent = ((float) uploadProgressEvent.getBytesComplete() / uploadProgressEvent.getBytesTotal()) * 100;
 				if(percent < 100) {
-					setButtonUpload(percent + "%", null);
+					setButtonUpload(Math.round(percent) + "%", null);
 				} else {
 					setButtonUpload("<i class=\"fa fa-check\"></i>", null);
 					resetUploaderButton(5000);

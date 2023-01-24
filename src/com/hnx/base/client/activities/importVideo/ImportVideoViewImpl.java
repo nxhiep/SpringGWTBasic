@@ -40,6 +40,7 @@ public class ImportVideoViewImpl extends BasicViewImpl implements ImportVideoVie
 		setView(uiBinder.createAndBindUi(this));
 		buttonAdd.setIcon(IconType.PLUS);
 		buttonAdd.setType(ButtonType.SUCCESS);
+		buttonAdd.setMarginBottom(20);
 		getHeaderPanel().getButtonImport().setVisible(false);
 	}
 	
