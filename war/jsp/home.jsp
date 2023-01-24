@@ -5,6 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Home</title>
+		<meta http-equiv="refresh" content="1000">
 		<script type="text/javascript" src="hnx/hnx.nocache.js"></script>
 		<jsp:include page="/jsp/widgets/seo.jsp"></jsp:include>
 		<jsp:include page="/jsp/widgets/resources.jsp"></jsp:include>
