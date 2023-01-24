@@ -10,6 +10,7 @@ import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.hnx.base.client.ClientUtils;
 import com.hnx.base.client.activities.basic.BasicPlace;
 import com.hnx.base.client.activities.home.HomePlace;
+import com.hnx.base.client.activities.importVideo.ImportVideoPlace;
 import com.hnx.base.client.activities.settings.SettingPlace;
 import com.hnx.base.shared.PlaceToken;
 
@@ -20,6 +21,9 @@ public class AppPlaceHistoryMapper implements PlaceHistoryMapper {
 //		Map<String, String> params = getMapURLSearchParams(token);
 		if(token.contains(PlaceToken.SETTINGS_PLACE)) {
 			return new SettingPlace();
+		}
+		if(token.contains(PlaceToken.IMPORT_VIDEO_PLACE)) {
+			return new ImportVideoPlace();
 		}
 		return new HomePlace();
 	}

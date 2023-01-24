@@ -14,6 +14,7 @@ import com.hnx.base.shared.model.Product;
 import com.hnx.base.shared.model.ProductMaterial;
 import com.hnx.base.shared.model.RoadTextTure;
 import com.hnx.base.shared.model.UserInfo;
+import com.hnx.base.shared.model.Video;
 
 public class MyContextListener implements ServletContextListener {
 
@@ -34,5 +35,6 @@ public class MyContextListener implements ServletContextListener {
 		ObjectifyService.register(ProductMaterial.class);
 		ObjectifyService.register(RoadTextTure.class);
 		ObjectifyService.register(UserInfo.class);
+		ObjectifyService.register(Video.class);
 	}
 }

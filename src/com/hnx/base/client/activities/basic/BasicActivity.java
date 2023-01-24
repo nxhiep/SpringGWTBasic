@@ -8,16 +8,10 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.web.bindery.event.shared.HandlerRegistration;
-import com.hnx.base.client.ClientData;
-import com.hnx.base.client.LoginManager;
 import com.hnx.base.client.activities.ClientFactory;
-import com.hnx.base.client.activities.home.HomePlace;
-import com.hnx.base.client.activities.settings.SettingPlace;
-import com.hnx.base.client.view.Toaster;
+import com.hnx.base.client.activities.importVideo.ImportVideoPlace;
 
 public class BasicActivity extends AbstractActivity {
 
@@ -54,50 +48,11 @@ public class BasicActivity extends AbstractActivity {
 
 	protected void bind() {
 		removeHandlerRegistration();
-		addHandlerRegistration(view.getHeaderPanel().getButtonLogin().addClickHandler(new ClickHandler() {
+		addHandlerRegistration(view.getHeaderPanel().getButtonImport().addClickHandler(new ClickHandler() {
 			
 			@Override
-			public void onClick(ClickEvent event) {
-				LoginManager.openLoginDialog();
-			}
-		}));
-		addHandlerRegistration(view.getHeaderPanel().getButtonRegister().addClickHandler(new ClickHandler() {
-			
-			@Override
-			public void onClick(ClickEvent event) {
-				LoginManager.openRegisterDialog();
-			}
-		}));
-		addHandlerRegistration(view.getHeaderPanel().getButtonLogout().addClickHandler(new ClickHandler() {
-			
-			@Override
-			public void onClick(ClickEvent event) {
-				ClientData.DATA_SERVICE.logout(new AsyncCallback<Void>() {
-
-					@Override
-					public void onFailure(Throwable caught) {
-						Toaster.showError("Có lỗi xảy ra!");
-					}
-
-					@Override
-					public void onSuccess(Void result) {
-						Window.Location.reload();
-					}
-				});
-			}
-		}));
-		addHandlerRegistration(view.getBasicLayout().getButtonHome().addClickHandler(new ClickHandler() {
-			
-			@Override
-			public void onClick(ClickEvent event) {
-				goTo(new HomePlace());
-			}
-		}));
-		addHandlerRegistration(view.getBasicLayout().getButtonSettings().addClickHandler(new ClickHandler() {
-					
-			@Override
-			public void onClick(ClickEvent event) {
-				goTo(new SettingPlace());
+			public void onClick(ClickEvent arg0) {
+				goTo(new ImportVideoPlace());
 			}
 		}));
 	}

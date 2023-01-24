@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.gwtbootstrap3.client.ui"
+	xmlns:v="urn:import:com.hnx.base.client.view"
+	>
+	<ui:style>
+	</ui:style>
+	<g:HTMLPanel styleName="create-video-popup">
+		<div class="item">
+			<b:TextBox ui:field="nameBox" placeholder="Name"></b:TextBox>
+		</div>
+		<div class="item">
+			<b:TextArea ui:field="descriptionBox" placeholder="Description"></b:TextArea>
+		</div>
+		<div class="item">
+			<label>Upload Image</label>
+			<v:UploaderPanel ui:field="uploaderImage"></v:UploaderPanel>
+			<b:TextBox ui:field="imageBox" placeholder="Url"></b:TextBox>
+		</div>
+		<div class="item">
+			<label>Upload Video</label>
+			<v:UploaderPanel ui:field="uploaderVideo"></v:UploaderPanel>
+			<b:TextBox ui:field="videoBox" placeholder="Url"></b:TextBox>
+		</div>
+		<div class="item">
+			<b:TextBox ui:field="categoryBox" placeholder="Category"></b:TextBox>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

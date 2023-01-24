@@ -43,4 +43,9 @@ public class ClientUtils {
 	public static boolean isMobileWeb() {
 		return Window.getClientWidth() <= 768;
 	}
+
+	public static boolean isLocalTestMode() {
+		String href = Window.Location.getHref();
+		return href.contains("127.0.0.1") || href.contains("localhost");
+	}
 }

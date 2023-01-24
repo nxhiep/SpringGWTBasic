@@ -12,7 +12,7 @@ import com.hnx.base.client.activities.AsyncActivityManager;
 import com.hnx.base.client.activities.AsyncActivityMapper;
 import com.hnx.base.client.activities.ClientFactory;
 import com.hnx.base.client.activities.ClientFactoryImpl;
-import com.hnx.base.client.activities.home.HomePlace;
+import com.hnx.base.client.activities.importVideo.ImportVideoPlace;
 import com.hnx.base.shared.model.UserInfo;
 
 public class HNX implements EntryPoint {
@@ -20,7 +20,7 @@ public class HNX implements EntryPoint {
 	public static ClientFactory CLIENT_FACTORY = new ClientFactoryImpl();
 	
 	public void onModuleLoad() {
-		ClientData.prepareData();
+//		ClientData.prepareData();
 		ClientData.loginFromSession(new AsyncCallback<UserInfo>() {
 			
 			@Override
@@ -43,7 +43,7 @@ public class HNX implements EntryPoint {
 		activityManager.setDisplay(display);
 		AppPlaceHistoryMapper historyMapper = GWT.create(AppPlaceHistoryMapper.class);
 		PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(historyMapper);
-		historyHandler.register(CLIENT_FACTORY.getPlaceController(), CLIENT_FACTORY.getEventBus(), new HomePlace());
+		historyHandler.register(CLIENT_FACTORY.getPlaceController(), CLIENT_FACTORY.getEventBus(), new ImportVideoPlace());
 		historyHandler.handleCurrentHistory();
 		RootPanel.get("content").add(display);
 	}

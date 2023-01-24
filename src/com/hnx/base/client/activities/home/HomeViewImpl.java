@@ -15,7 +15,6 @@ public class HomeViewImpl extends BasicViewImpl implements HomeView {
 	public HomeViewImpl() {
 		super();
 		setView(uiBinder.createAndBindUi(this));
-		setActiveTab(this.getBasicLayout().getButtonHome());
 	}
 	
 	@Override

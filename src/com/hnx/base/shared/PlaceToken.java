@@ -9,4 +9,5 @@ public class PlaceToken {
 	public static final String SETTINGS_PLACE = "settings";
 	public static final String PROCESS_PLACE = "progress";
 	public static final String PRODUCT_DETAILS_PLACE = "product";
+	public static final String IMPORT_VIDEO_PLACE = "import-video";
 }

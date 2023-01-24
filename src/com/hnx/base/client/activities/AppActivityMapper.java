@@ -7,6 +7,8 @@ import com.google.gwt.user.client.Window;
 import com.hnx.base.client.activities.basic.BasicActivity;
 import com.hnx.base.client.activities.home.HomeActivity;
 import com.hnx.base.client.activities.home.HomePlace;
+import com.hnx.base.client.activities.importVideo.ImportVideoActivity;
+import com.hnx.base.client.activities.importVideo.ImportVideoPlace;
 import com.hnx.base.client.activities.settings.SettingActivity;
 import com.hnx.base.client.activities.settings.SettingPlace;
 
@@ -24,6 +26,8 @@ public class AppActivityMapper implements AsyncActivityMapper {
 			runAsync(activityCallbackHandler, new HomeActivity(place, clientFactory));
 		} else if (place instanceof SettingPlace) {
 			runAsync(activityCallbackHandler, new SettingActivity(place, clientFactory));
+		} else if (place instanceof ImportVideoPlace) {
+			runAsync(activityCallbackHandler, new ImportVideoActivity(place, clientFactory));
 		}
 	}
 

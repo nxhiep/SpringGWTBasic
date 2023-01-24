@@ -30,37 +30,13 @@ public class Config {
 	
 	public static final int DEFAULT_EXPIRED_TIME = 30;
 
-	public static boolean isFileNameImage(String fileName){
-		if(fileName.toLowerCase().endsWith(".jpg") || fileName.toLowerCase().endsWith(".png")
-			|| fileName.toLowerCase().endsWith(".gif") || fileName.toLowerCase().endsWith(".jpeg")
-			|| fileName.toLowerCase().endsWith(".svg")){
-			return true;
-		}
-		return false;
-	}
+	public static final String BUCKET_NAME = "deploy-temp.appspot.com";
+	public static final String BUCKET_NAME_FOLDER_IMAGE = "images";
+	public static final String BUCKET_NAME_FOLDER_VIDEO = "videos";
+	public static final String BUCKET_NAME_FOLDER_AUDIO = "audios";
+	public static final String BUCKET_NAME_FOLDER_DOCUMENT = "documents";
+	public static final String BUCKET_NAME_FOLDER_OTHER = "others";
 	
-	public static boolean isFileNameDocument(String fileName){
-		if(fileName.toLowerCase().endsWith(".pdf") || fileName.toLowerCase().endsWith(".docx") || fileName.toLowerCase().endsWith(".doc")
-			|| fileName.toLowerCase().endsWith(".xlsx") || fileName.toLowerCase().endsWith(".xls")
-			|| fileName.toLowerCase().endsWith(".ppt") || fileName.toLowerCase().endsWith(".pptx") 
-			|| fileName.toLowerCase().endsWith(".ppsx")){
-			return true;
-		}
-		return false;
-	}
-	
-	public static boolean isFileNameSound(String fileName){
-		if(fileName.toLowerCase().endsWith(".mp3") || fileName.toLowerCase().toLowerCase().contains("wav")){
-			return true;
-		}
-		return false;
-	}
-	
-	public static boolean isFileNameVideo(String fileName){
-		fileName.toLowerCase();
-		if(fileName.endsWith(".mp4") ){
-			return true;
-		}
-		return false;
-	}
+	public static final String GOOGLE_CLOUD_STORAGE_URL = "https://storage.googleapis.com/";
+	public static int FILE_SIZE_LIMIT = 20 * 1024 * 1024; // 20 MiB
 }

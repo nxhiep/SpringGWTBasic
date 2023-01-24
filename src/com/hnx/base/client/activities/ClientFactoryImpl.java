@@ -5,6 +5,8 @@ import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.event.shared.SimpleEventBus;
 import com.hnx.base.client.activities.home.HomeView;
 import com.hnx.base.client.activities.home.HomeViewImpl;
+import com.hnx.base.client.activities.importVideo.ImportVideoView;
+import com.hnx.base.client.activities.importVideo.ImportVideoViewImpl;
 import com.hnx.base.client.activities.settings.SettingView;
 import com.hnx.base.client.activities.settings.SettingViewImpl;
 
@@ -35,5 +37,10 @@ public class ClientFactoryImpl implements ClientFactory {
 	@Override
 	public SettingView getSettingsView() {
 		return new SettingViewImpl();
+	}
+
+	@Override
+	public ImportVideoView getImportVideoView() {
+		return new ImportVideoViewImpl();
 	}
 }

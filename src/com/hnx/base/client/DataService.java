@@ -9,6 +9,7 @@ import com.hnx.base.shared.model.ActivityInfo;
 import com.hnx.base.shared.model.IBasic;
 import com.hnx.base.shared.model.Product;
 import com.hnx.base.shared.model.UserInfo;
+import com.hnx.base.shared.model.Video;
 
 /**
  * The client-side stub for the RPC service.
@@ -33,4 +34,6 @@ public interface DataService extends RemoteService {
 	List<ActivityInfo> getActivities();
 
 	List<ActionInfo> getActions();
+
+	List<Video> getVideos();
 }

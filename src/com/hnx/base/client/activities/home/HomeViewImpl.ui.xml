@@ -5,6 +5,6 @@
 	<ui:style>
 	</ui:style>
 	<g:HTMLPanel ui:field="mainPanel" styleName="home-page">
-		<div><strong>Home Page</strong></div>
+		<div><strong>Home Pagexx</strong></div>
 	</g:HTMLPanel>
 </ui:UiBinder> 

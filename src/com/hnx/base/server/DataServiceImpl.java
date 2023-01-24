@@ -6,11 +6,13 @@ import com.hnx.base.client.DataService;
 import com.hnx.base.server.dao.ProductDAO;
 import com.hnx.base.server.dao.SettingDAO;
 import com.hnx.base.server.dao.UserDAO;
+import com.hnx.base.server.dao.VideoDAO;
 import com.hnx.base.shared.model.ActionInfo;
 import com.hnx.base.shared.model.ActivityInfo;
 import com.hnx.base.shared.model.IBasic;
 import com.hnx.base.shared.model.Product;
 import com.hnx.base.shared.model.UserInfo;
+import com.hnx.base.shared.model.Video;
 
 /**
  * The server-side implementation of the RPC service.
@@ -65,5 +67,10 @@ public class DataServiceImpl extends CustomRemoteServiceServlet implements DataS
 	@Override
 	public List<ActionInfo> getActions() {
 		return SETTING_DAO.getActions();
+	}
+
+	@Override
+	public List<Video> getVideos() {
+		return new VideoDAO().getVideos();
 	}
 }

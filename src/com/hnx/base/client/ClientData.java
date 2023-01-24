@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.rpc.ServiceDefTarget;
 import com.hnx.base.client.view.Toaster;
 import com.hnx.base.shared.model.IBasic;
 import com.hnx.base.shared.model.UserInfo;
@@ -12,7 +13,10 @@ public class ClientData {
 	public final static DataServiceAsync DATA_SERVICE = GWT.create(DataService.class);
 	
 	public static void prepareData() {
-		
+		if(ClientUtils.isLocalTestMode()) {
+			ServiceDefTarget dataServiceDef = (ServiceDefTarget) DATA_SERVICE;
+			dataServiceDef.setServiceEntryPoint("https://hnx-dot-deploy-temp.appspot.com/hnx/data");
+		}
 	}
 	
 	public static void loginFromSession(AsyncCallback<UserInfo> callback) {

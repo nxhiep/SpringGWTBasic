@@ -33,5 +33,6 @@ public class HomeActivity extends BasicActivity {
 	@Override
 	protected void loadData() {
 		super.loadData();
+		
 	}
 }

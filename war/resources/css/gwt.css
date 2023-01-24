@@ -56,3 +56,38 @@ body {
 	background: white;
 	padding: 7px 10px;
 }
+
+.import-video-page {
+	padding: 12px 0;
+}
+
+.create-video-popup .item {
+	margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+.create-video-popup .item label {
+	width: 150px;
+	text-align: left;	
+}
+
+.import-video-page .video-item {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    display: inline-block;
+}
+.import-video-page .video-item image {
+	cursor: pointer;
+}
+.import-video-page .video-item image:hover {
+	background: #ddd;
+}
+.import-video-page .video-item .title {
+	font-weight: 500;
+	margin-bottom: 4px;	
+}
+.import-video-page .video-item img {
+    width: 100%;
+}

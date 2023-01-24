@@ -8,6 +8,7 @@ import com.hnx.base.shared.model.ActivityInfo;
 import com.hnx.base.shared.model.IBasic;
 import com.hnx.base.shared.model.Product;
 import com.hnx.base.shared.model.UserInfo;
+import com.hnx.base.shared.model.Video;
 
 /**
  * The async counterpart of <code>GreetingService</code>.
@@ -31,4 +32,6 @@ public interface DataServiceAsync {
 	void getActivities(AsyncCallback<List<ActivityInfo>> callback);
 
 	void getActions(AsyncCallback<List<ActionInfo>> callback);
+
+	void getVideos(AsyncCallback<List<Video>> callback);
 }
