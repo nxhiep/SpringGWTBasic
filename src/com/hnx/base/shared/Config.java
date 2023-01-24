@@ -38,5 +38,5 @@ public class Config {
 	public static final String BUCKET_NAME_FOLDER_OTHER = "others";
 	
 	public static final String GOOGLE_CLOUD_STORAGE_URL = "https://storage.googleapis.com/";
-	public static int FILE_SIZE_LIMIT = 10 * 1024 * 1024 * 1024; // 10GB
+	public static int FILE_SIZE_LIMIT = 20 * 1024 * 1024; // 100MB
 }

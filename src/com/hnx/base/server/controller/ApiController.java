@@ -1,5 +1,7 @@
 package com.hnx.base.server.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -9,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.hnx.base.server.dao.VideoDAO;
 import com.hnx.base.shared.model.UserInfo;
+import com.hnx.base.shared.model.Video;
 
 @Controller
 @RequestMapping(value = "/api")
@@ -35,5 +39,10 @@ public class ApiController extends BasicController {
 	@RequestMapping(value="/logout", method = RequestMethod.POST)
 	public @ResponseBody void logout(HttpServletRequest request, HttpServletResponse response) {
 		USER_DAO.logout(request, response);
+	}
+	
+	@RequestMapping(value = "/videos", method = RequestMethod.POST)
+	public @ResponseBody List<Video> getVideos(HttpServletRequest request, HttpServletResponse response) {
+		return new VideoDAO().getVideos();
 	}
 }
